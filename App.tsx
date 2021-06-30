@@ -6,7 +6,7 @@ import {
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
-import { Home } from "./src/screens/Home";
+import { Routes } from "./src/routes";
 import { StatusBar } from "react-native";
 import { Background } from "./src/components/Background";
 
@@ -27,7 +27,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+      <Routes />
     </Background>
   );
 }
