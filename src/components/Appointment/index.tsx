@@ -1,15 +1,12 @@
 import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
 import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 import { View, Text } from "react-native";
 import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
 import PlayerSvg from "../../assets/player.svg";
 import CalendarSvg from "../../assets/calendar.svg";
-
 import { GuildIcon } from "../GuildIcon";
 import { categories } from "../../utils/categories";
-import { Pressable } from "react-native";
 export type GuildProps = {
   id: string,
   name: string,
