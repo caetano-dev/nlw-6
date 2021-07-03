@@ -12,11 +12,6 @@ import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export function Home() {
-  const navigation = useNavigation()
-  const [category, setCategory] = useState("");
-  function handleAppointmentDetails(){
-    navigation.navigate("AppointmentDetails")
-  }
   const appointments = [
     {
       id: "1",
@@ -45,16 +40,24 @@ export function Home() {
         "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
     },
   ];
+  const navigation = useNavigation();
+  const [category, setCategory] = useState("");
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory("") : setCategory(categoryId);
+  }
+  function handleAppointmentDetails() {
+    navigation.navigate("AppointmentDetails");
+  }
+  function handleAppointmentCreate() {
+    navigation.navigate("AppointmentCreate");
   }
 
   return (
     <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate}/>
       </View>
       <View>
         <CategorySelect
@@ -66,7 +69,9 @@ export function Home() {
           <FlatList
             data={appointments}
             keyExtractor={(item) => item.id}
-            renderItem={({ item }) => <Appointment data={item} onPress={handleAppointmentDetails}/>}
+            renderItem={({ item }) => (
+              <Appointment data={item} onPress={handleAppointmentDetails} />
+            )}
             ItemSeparatorComponent={() => <ListDivider />}
             style={styles.matches}
             showsVerticalScrollIndicator={false}
