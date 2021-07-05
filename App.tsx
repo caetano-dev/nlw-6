@@ -4,6 +4,7 @@ import {
 } from "@expo-google-fonts/rajdhani";
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import { Background } from "./src/components/Background";
+import { AuthProvider } from "./src/hooks/auth";
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "react-native";
 import { Routes } from "./src/routes";
@@ -27,7 +28,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   );
 }
