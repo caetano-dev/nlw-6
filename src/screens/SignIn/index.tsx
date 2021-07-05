@@ -1,10 +1,10 @@
-import React from "react";
-import { View, Image, Text } from "react-native";
-import { styles } from "./styles";
-import { ButtonIcon } from "../../components/ButtonIcon";
 import IllustrationImg from "../../assets/illustration.png";
+import { ButtonIcon } from "../../components/ButtonIcon";
 import { useNavigation } from "@react-navigation/native";
 import { Background } from "../../components/Background";
+import { View, Image, Text } from "react-native";
+import { styles } from "./styles";
+import React from "react";
 
 export function SignIn() {
   const navigation = useNavigation();

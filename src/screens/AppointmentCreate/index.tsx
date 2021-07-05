@@ -1,10 +1,3 @@
-import React, { useState } from "react";
-import { Background } from "../../components/Background";
-import { CategorySelect } from "../../components/CategorySelect";
-import { RectButton } from "react-native-gesture-handler";
-import { Header } from "../../components/Header";
-import { GuildIcon } from "../../components/GuildIcon";
-import { Feather } from "@expo/vector-icons";
 import {
   Text,
   View,
@@ -12,14 +5,21 @@ import {
   Platform,
   KeyboardAvoidingView,
 } from "react-native";
-import { styles } from "./styles";
-import { theme } from "../../global/styles/theme";
+import { CategorySelect } from "../../components/CategorySelect";
+import { RectButton } from "react-native-gesture-handler";
 import { SmallInput } from "../../components/SmallInput";
-import { TextArea } from "../../components/TextArea";
-import { Button } from "../../components/Button";
+import { Background } from "../../components/Background";
 import { ModalView } from "../../components/ModalView";
-import { Guilds } from "../Guilds";
+import { GuildIcon } from "../../components/GuildIcon";
+import { TextArea } from "../../components/TextArea";
 import { GuildProps } from "../../components/Guild";
+import { theme } from "../../global/styles/theme";
+import { Button } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { Feather } from "@expo/vector-icons";
+import React, { useState } from "react";
+import { Guilds } from "../Guilds";
+import { styles } from "./styles";
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState("");

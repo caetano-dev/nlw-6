@@ -1,17 +1,16 @@
-import React from "react";
-import { Fontisto } from "@expo/vector-icons";
+import { ImageBackground, Text, View, FlatList } from "react-native";
+import { BorderlessButton } from "react-native-gesture-handler";
+import { ListDivider } from "../../components/ListDivider";
 import { Background } from "../../components/Background";
 import { ListHeader } from "../../components/ListHeader";
 import { ButtonIcon } from "../../components/ButtonIcon";
-
-import { Header } from "../../components/Header";
-import { BorderlessButton } from "react-native-gesture-handler";
 import { theme } from "../../global/styles/theme";
-import { ImageBackground, Text, View, FlatList } from "react-native";
-import BannerImg from "../../assets/banner.png";
-import { styles } from "./styles";
+import { Header } from "../../components/Header";
 import { Member } from "../../components/Member";
-import { ListDivider } from "../../components/ListDivider";
+import BannerImg from "../../assets/banner.png";
+import { Fontisto } from "@expo/vector-icons";
+import { styles } from "./styles";
+import React from "react";
 
 export function AppointmentDetails() {
   const members = [
