@@ -1,11 +1,12 @@
-import React, { ReactNode } from "react";
-import { View, Text } from "react-native";
+import { BorderlessButton } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { theme } from "../../global/styles/theme";
-import { BorderlessButton } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
+import { View, Text } from "react-native";
+import React, { ReactNode } from "react";
 import { styles } from "./styles";
-import { useNavigation } from "@react-navigation/native";
+
 type Props = {
   title: string;
   action?: ReactNode;

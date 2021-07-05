@@ -1,14 +1,14 @@
-import React from "react";
 import { RectButton, RectButtonProps } from "react-native-gesture-handler";
-import { View, Text } from "react-native";
-import { theme } from "../../global/styles/theme";
-import { styles } from "./styles";
-import PlayerSvg from "../../assets/player.svg";
-import CalendarSvg from "../../assets/calendar.svg";
-import { GuildIcon } from "../GuildIcon";
-import { categories } from "../../utils/categories";
 import { LinearGradient } from "expo-linear-gradient";
+import CalendarSvg from "../../assets/calendar.svg";
+import { categories } from "../../utils/categories";
+import { theme } from "../../global/styles/theme";
+import PlayerSvg from "../../assets/player.svg";
+import { View, Text } from "react-native";
+import { GuildIcon } from "../GuildIcon";
 import { GuildProps } from "../Guild";
+import { styles } from "./styles";
+import React from "react";
 
 export type AppointmentProps = {
   id: string;

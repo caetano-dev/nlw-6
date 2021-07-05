@@ -1,8 +1,8 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { styles } from "./styles";
-import { Avatar } from "../Avatar";
 import { theme } from "../../global/styles/theme";
+import { View, Text } from "react-native";
+import { Avatar } from "../Avatar";
+import { styles } from "./styles";
+import React from "react";
 
 export type MemberProps = {
   id: string;

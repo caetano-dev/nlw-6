@@ -5,10 +5,11 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
 } from "react-native";
-import { styles } from "./styles";
-import { GuildIcon } from "../GuildIcon";
-import { Feather } from "@expo/vector-icons";
 import { theme } from "../../global/styles/theme";
+import { Feather } from "@expo/vector-icons";
+import { GuildIcon } from "../GuildIcon";
+import { styles } from "./styles";
+
 
 export type GuildProps = {
   id: string;
