@@ -1,18 +1,20 @@
 import IllustrationImg from "../../assets/illustration.png";
 import { ButtonIcon } from "../../components/ButtonIcon";
-import { useNavigation } from "@react-navigation/native";
 import { Background } from "../../components/Background";
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, Alert } from "react-native";
 import { useAuth } from "../../hooks/auth";
 import { styles } from "./styles";
 import React from "react";
 
 export function SignIn() {
-  const navigation = useNavigation();
-  const {user} = useAuth()
+  const { user, signIn } = useAuth();
 
-  function handleSignIn() {
-    navigation.navigate("Home");
+  async function handleSignIn() {
+    try {
+      await signIn();
+    } catch (error) {
+      Alert.alert(error);
+    }
   }
   return (
     <Background>
